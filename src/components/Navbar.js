@@ -37,12 +37,12 @@ function updateButton() {
 async function connectWebsite() {
 
     const chainId = await window.ethereum.request({ method: 'eth_chainId' });
-    if(chainId !== '0x5')
+    if(chainId !== '0x2a')
     {
-      //alert('Incorrect network! Switch your metamask network to Rinkeby');
+      //alert('Incorrect network! Switch your metamask network to Chikochain');
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: '0x5' }],
+        params: [{ chainId: '0x2a' }],
      })
     }  
     await window.ethereum.request({ method: 'eth_requestAccounts' })
